@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #050B08;
+  --color-bg-secondary: #0A1510;
+  --color-primary: #19C784;
+  --color-mint: #83E6B5;
+  --color-white: #F4F7F5;
+  --color-muted: #91A49A;
+  --color-border: rgba(25, 199, 132, 0.15);
+  --color-glow: rgba(25, 199, 132, 0.25);
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Consolas, "Liberation Mono", Menlo, monospace;
+}
+
+:root {
+  --background: #050B08;
+  --foreground: #F4F7F5;
+}
+
+body {
+  background: #050B08;
+  color: #F4F7F5;
+  font-family: var(--font-sans);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050B08;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #19C784;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #83E6B5;
+}
+
+/* Glass panel */
+.glass-panel {
+  background: rgba(10, 21, 16, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(25, 199, 132, 0.15);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+/* Glow effects */
+.glow-green {
+  box-shadow: 0 0 40px rgba(25, 199, 132, 0.15);
+}
+
+.glow-mint {
+  box-shadow: 0 0 40px rgba(131, 230, 181, 0.1);
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #F4F7F5 0%, #19C784 50%, #83E6B5 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Border gradient */
+.border-gradient {
+  position: relative;
+  border: 1px solid transparent;
+  background: linear-gradient(#0A1510, #0A1510) padding-box,
+              linear-gradient(135deg, #19C784, #83E6B5) border-box;
+}
+
+/* Demo data badge */
+.demo-badge {
+  background: rgba(25, 199, 132, 0.1);
+  border: 1px solid rgba(25, 199, 132, 0.3);
+  color: #19C784;
+}
+
+/* Selection */
+::selection {
+  background: #19C784;
+  color: #050B08;
+}
+
+/* Hide scrollbar for horizontal tables but keep functionality */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
